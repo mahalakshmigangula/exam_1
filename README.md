@@ -19,4 +19,15 @@ class shoppingbasket :
             total+=v*prices[k]-discount[k]
         return total
 class pricelist :
-    def
+    
+    
+    
+    def bubble(values):
+    length=len(values)
+    for i in range(length-1):
+        for j in range(length-1-i):
+            if values[j] <values[j+1]:
+                values[j+1],values[j]=values[j],values[j+1]
+    return values
+    
+
