@@ -1,38 +1,26 @@
-#https://github.com/mahalakshmigangula/exam_1
-#items
-#each item quantity
-#basket contain discount code
-#shop has standard price list
-#percentage code to the list of eligible products
-#method which accepts a list of baskets, and outputs their values from highest to lowest.
-standardprices= {'eggs-6':1,'flour1kg':2.50,'rice1kg':2,'mayoniese250ml':2}#value in euros
-discount= {'egg40':20%,'flour4kg':20%,'rice20kg':20% }#valid discounts
-class shoppingbasket :
-    def __init__(self,groeries{}):
-        self.__groceries=groceries
-    
-        
-    def value(self):
-        pass
-        total=0
-        for k,v in self.__groceries.items();
-            if discount[sym] not in discount:
-                return 0
-            total+=v*prices[k]-discount[k]
-        return total
-class pricelist :
-    pass
-    
-    
-    
-    def bubble(values):
-        pass
-    length=len(values)
-    for i in range(length-1):
-        for j in range(length-1-i):
-            if values[j] <values[j+1]:
-                values[j+1],values[j]=values[j],values[j+1]
-    return values
-    
-    
+"""A shopping basket contains a number of line items, for example: eggs, rice, flour; each with a specific quantity. A basket may also have one discount code, for example eggs20. 
 
+The shop has a standard price list, as well as a set of currently valid discount codes, each of which confers a certain percentage discount for a list of eligible products.
+
+Produce a method which accepts a list of baskets, and outputs their values from highest to lowest."""
+
+#nested dictionary
+print("welcome to the store ")
+print("------------------------------")
+print("\n")
+print('THE STANDARD PRICES OF THE STORE ARE')
+standardPrices={'rice_1kg':2,
+               'mayonnaise_250ml':2,
+               'milk_1lit':2,
+               'noodles_2pk':1,
+               'curd_1kg':1.5,
+               'eggs_6':1,
+               'wheatfloor_1kg':2}
+
+for key,value in standardPrices.items():
+    print(str(key)+':'+ str(value))
+discounts= {'egg_30':0.2,'flour_4kg':0.2,'rice_20kg':0.2 }
+class shoppingbasket:
+    
+    def getprice():
+        pass
