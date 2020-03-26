@@ -2,6 +2,8 @@
 A basket may also have one discount code, for example eggs20. The shop has a standard price list, as well as a set 
 of currently valid discount codes, each of which confers a certain percentage discount for a list of eligible products.
 Produce a method which accepts a list of baskets, and outputs their values from highest to lowest."""
+#https://github.com/mahalakshmigangula/exam_1/blob/master/README.md
+
 print("welcome to the store ")
 print("------------------------------")
 print("\n")
@@ -21,6 +23,7 @@ customer1={'rice_1kg':20,'milk_1lit':3,'curd_1kg':1.5}
 
 class shoppingbasket:
     def getprice(product,qty):#for one product
+      
         x=standardPrice[product]*qty
         if (product=='eggs_6'and qty==5):
             discount=x*discounts['eggs_30']
@@ -33,13 +36,22 @@ class shoppingbasket:
             subtotal=x-discount
         else:
             subtotal=x
+            
+     
         return subtotal
-    def actualbill():
+      
+    def actualbill(discountedPrice=[],discountedPrice1={}):
         bill=0
+        
         for key,value in customer1.items():
+            
             bill = bill + shoppingbasket.getprice(key,value)
+            discountedPrice.append(shoppingbasket.getprice(key,value))
+            discountedPrice1[key]=shoppingbasket.getprice(key,value)
+            print('list of discounted prices',discountedPrice)
+            print('list of discounted prices with their respectie products',discountedPrice1)
+            print('sorted items from high to low of a shopping basket:',sorted(discountedPrice1.items(), key=lambda value: value[1],reverse=True))
+           
+            
         return bill
-
-    
-        
-        
+         
