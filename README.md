@@ -25,11 +25,11 @@ class shoppingbasket:
         if (product=='eggs_6'and qty==5):
             discount=x*discounts['eggs_30']
             subtotal=x-discount
-        elif product=='wheatflour_1kg' and qty==4:
-            subtotal=x*discounts['wheatflour_1kg']
+        elif product=='wheatflour_4kg' and qty==4:
+            discount=x*discounts['wheatflour_1kg']
             subtotal=x-discount
         elif product=='rice_1kg' and qty==20:
-            subtotal=x*discounts['wheatflour_1kg']
+            discount=x*discounts['rice_20kg']
             subtotal=x-discount
         else:
             subtotal=x
@@ -39,3 +39,7 @@ class shoppingbasket:
         for key,value in customer1.items():
             bill = bill + shoppingbasket.getprice(key,value)
         return bill
+
+    
+        
+        
